@@ -63,7 +63,11 @@
  * }
  */
 
-// ...
+const yelling = arrayOfStrings => {
+  return arrayOfStrings.map(string => {
+    return string.toUpperCase()
+  })
+}
 
 /**
  *
@@ -72,6 +76,12 @@
  * the numbers multiplied by 2
  */
 
+const doubleTrouble = arrayOfTrouble => {
+  return arrayOfTrouble.map(trouble => {
+    return trouble * 2
+  })
+}
+
 // ...
 
 /*
@@ -79,14 +89,17 @@
  * strings as an argument and returns a new array with each string
  * suffixed with " is at index X" where X is the index of the element
  */
-
-// ...
+const stringyIndexes = strings => {
+  return strings.map((string, stringIndex) => {
+    return `${string} is at index ${stringIndex}`
+  })
+}
 
 /*
  * Define a function onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  */
-
+//documentation open. which of these methods solve.
 // ...
 
 /*
