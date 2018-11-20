@@ -8,7 +8,7 @@ After completing this assignment, you should be able to:
 
 ## Instructions
 
-1. Fork [this repository](https://github.com/suncoast-devs/js-enumerables) to your own account.
+1. Fork [this repository](https://github.com/suncoast-devs/js-iteration) to your own account.
 2. Change into your projects directory:
 3. Clone your repository: `git clone js-enumerables`
 4. Change into your project's directory: `cd function-junction`
