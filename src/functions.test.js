@@ -83,7 +83,6 @@ const doubleTrouble = arrayOfTrouble => {
 }
 
 // ...
-
 /*
  * Define a function stringyIndexes() that takes an array of
  * strings as an argument and returns a new array with each string
@@ -99,16 +98,26 @@ const stringyIndexes = strings => {
  * Define a function onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  */
-//documentation open. which of these methods solve.
+//*******/documentation open. which of these methods solve.
 // ...
-
+const onlyTheEvenSurvive = numbers => {
+  return numbers.filter(number => {
+    number = number % 2 === 0
+    return number
+  })
+}
 /*
  * Define a function onlyTheEvenIndexedSurvive that accepts an array of
  * numbers and returns only the elements at indexes that are even
  */
-
+// if (index % 2 === 0)
 // ...
-
+const onlyTheEvenIndexedSurvive = numbers => {
+  return numbers.filter((array, index) => {
+    index = index % 2 === 0
+    return index
+  })
+}
 /*
  * Define a function bestMoviesOfTheYear that accepts an array of
  * movie objects AND a year and returns the names of movies that are
@@ -122,17 +131,29 @@ const stringyIndexes = strings => {
  *   score: 99
  * }
  */
+const bestMoviesOfTheYear = (movieArray, year) => {
+  return movieArray
+    .filter(movieItem => {
+      return movieItem.score >= 90 && movieItem.year === year
+    })
+    .map(object => {
+      return object.name
+    })
+}
 
 // ...
-
 /*
  * Define a function everyoneIsOdd that accepts an array of
  * numbers and returns true if every element of the array is
  * odd.
  */
-
+//every method
 // ...
-
+const everyoneIsOdd = oddArray => {
+  return oddArray.every(odd => {
+    return odd % 2 !== 0
+  })
+}
 /*
  * Define a function findTheNeedle that accepts an array of
  * strings and returns the one string that contains the word
@@ -140,13 +161,21 @@ const stringyIndexes = strings => {
  */
 
 // ...
-
+const findTheNeedle = needleArray => {
+  return needleArray.find(needle => {
+    return needle.includes('needle')
+  })
+}
 /*
  * Define a function findTheNeedleIndex that accepts an array of
  * strings and returns the index of the string that contains
  *  the word `needle` inside
  */
-
+const findTheNeedleIndex = needleArray => {
+  return needleArray.findIndex(needle => {
+    return needle.includes('needle')
+  })
+}
 // ...
 
 /*
@@ -154,7 +183,11 @@ const stringyIndexes = strings => {
  * strings and returns true if at least one string is exactly
  * four characters long
  */
-
+const someoneToLove = loveArray => {
+  return loveArray.some(love => {
+    return love.length === 4
+  })
+}
 // ...
 
 /*
@@ -165,7 +198,13 @@ const stringyIndexes = strings => {
  *
  * So no using forEach, map, filter, reduce, etc.
  */
-
+const mapYourself = selfNumber => {
+  let number = []
+  for (let index = 0; index < selfNumber.length; index++) {
+    number.push(selfNumber[index] * 2)
+  }
+  return number
+}
 // ...
 
 /*
