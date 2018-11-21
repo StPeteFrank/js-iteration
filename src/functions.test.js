@@ -198,13 +198,7 @@ const someoneToLove = loveArray => {
  *
  * So no using forEach, map, filter, reduce, etc.
  */
-const mapYourself = selfNumber => {
-  let number = []
-  for (let index = 0; index < selfNumber.length; index++) {
-    number.push(selfNumber[index] * 2)
-  }
-  return number
-}
+
 // ...
 
 /*
