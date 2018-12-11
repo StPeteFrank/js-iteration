@@ -30,25 +30,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 */
 
 /**
@@ -62,48 +43,42 @@
  *    // your code here
  * }
  */
-
 const yelling = arrayOfStrings => {
-  return arrayOfStrings.map(string => {
-    return string.toUpperCase()
+  return arrayOfStrings.map(words => {
+    return words.toUpperCase()
   })
 }
-
 /**
  *
  * Define a function named `doubleTrouble` that takes an array of
  * numbers as an argument and returns a new array with all
  * the numbers multiplied by 2
  */
-
-const doubleTrouble = arrayOfTrouble => {
-  return arrayOfTrouble.map(trouble => {
-    return trouble * 2
+const doubleTrouble = arrayOfNumbers => {
+  return arrayOfNumbers.map(numbers => {
+    return numbers * 2
   })
 }
-
 // ...
 /*
  * Define a function stringyIndexes() that takes an array of
- * strings as an argument and returns a new array with each string
- * suffixed with " is at index X" where X is the index of the element
+ * strings as an argument and returns a new array with each string(the element)
+ * suffixed with " is at index X" where X is the -index of the element-
  */
-const stringyIndexes = strings => {
-  return strings.map((string, stringIndex) => {
-    return `${string} is at index ${stringIndex}`
+const stringyIndexes = arrayOfStrings => {
+  return arrayOfStrings.map((strings, index) => {
+    return `${strings} is at index ${index}`
   })
 }
-
 /*
  * Define a function onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  */
 //*******/documentation open. which of these methods solve.
 // ...
-const onlyTheEvenSurvive = numbers => {
-  return numbers.filter(number => {
-    number = number % 2 === 0
-    return number
+const onlyTheEvenSurvive = arrayOfNumbers => {
+  return arrayOfNumbers.filter(numbers => {
+    return numbers % 2 === 0
   })
 }
 /*
@@ -111,9 +86,10 @@ const onlyTheEvenSurvive = numbers => {
  * numbers and returns only the elements at indexes that are even
  */
 // if (index % 2 === 0)
+//Whatever comes second in the argument is the index
 // ...
-const onlyTheEvenIndexedSurvive = numbers => {
-  return numbers.filter((array, index) => {
+const onlyTheEvenIndexedSurvive = arrayOfNumbers => {
+  return arrayOfNumbers.filter((numbers, index) => {
     index = index % 2 === 0
     return index
   })
@@ -130,28 +106,28 @@ const onlyTheEvenIndexedSurvive = numbers => {
  *   year: "2017",
  *   score: 99
  * }
+ * //filter and map
  */
-const bestMoviesOfTheYear = (movieArray, year) => {
-  return movieArray
-    .filter(movieItem => {
-      return movieItem.score >= 90 && movieItem.year === year
+const bestMoviesOfTheYear = (arrayOfMovies, year) => {
+  return arrayOfMovies
+    .filter(movies => {
+      return movies.score >= 90 && movies.year === year
     })
-    .map(object => {
-      return object.name
+    .map(movies => {
+      return movies.name
     })
 }
-
 // ...
 /*
  * Define a function everyoneIsOdd that accepts an array of
  * numbers and returns true if every element of the array is
  * odd.
  */
-//every method
+//.every method
 // ...
-const everyoneIsOdd = oddArray => {
-  return oddArray.every(odd => {
-    return odd % 2 !== 0
+const everyoneIsOdd = arrayOfNumbers => {
+  return arrayOfNumbers.every(numbers => {
+    return numbers % 2 !== 0
   })
 }
 /*
@@ -159,23 +135,18 @@ const everyoneIsOdd = oddArray => {
  * strings and returns the one string that contains the word
  * `needle` inside
  */
-
+//.find method
+//.includes method
 // ...
-const findTheNeedle = needleArray => {
-  return needleArray.find(needle => {
-    return needle.includes('needle')
-  })
-}
+const findTheNeedle = arrayOfStrings => {}
 /*
  * Define a function findTheNeedleIndex that accepts an array of
  * strings and returns the index of the string that contains
  *  the word `needle` inside
  */
-const findTheNeedleIndex = needleArray => {
-  return needleArray.findIndex(needle => {
-    return needle.includes('needle')
-  })
-}
+//.findIndex method
+//.includes method
+
 // ...
 
 /*
@@ -183,11 +154,8 @@ const findTheNeedleIndex = needleArray => {
  * strings and returns true if at least one string is exactly
  * four characters long
  */
-const someoneToLove = loveArray => {
-  return loveArray.some(love => {
-    return love.length === 4
-  })
-}
+//.some method
+
 // ...
 
 /*
@@ -198,6 +166,8 @@ const someoneToLove = loveArray => {
  *
  * So no using forEach, map, filter, reduce, etc.
  */
+//for loop
+//.push method
 
 // ...
 
@@ -210,6 +180,9 @@ const someoneToLove = loveArray => {
  *
  * So no using forEach, map, filter, reduce, etc.
  */
+//for loop
+//if statement
+//.push method
 
 // ...
 
@@ -222,7 +195,9 @@ const someoneToLove = loveArray => {
  *
  * So no using forEach, map, filter, reduce, etc.
  */
-
+//for loop
+//if statement
+//return true ~~reverse it!
 // ...
 
 /**
@@ -414,3 +389,57 @@ test('everyYourself()', t => {
 })
 
 /* eslint-enable */
+
+// Static, Newly added 11.26
+
+// function divisibleBy(numbers, divisor){
+//   let answer = []
+
+//   for (let index = 0; index < numbers.length; index++) {
+//     if (numbers[index] % divisor === 0) {
+//       answer.push(numbers[index])
+//     }
+//   }
+
+//   return answer
+// }
+
+// ——0r and better——
+
+// function divisibleBy(numbers, divisor){
+//   return numbers.filter(number => {
+//      // return true if we are keeping this number, false otherwise
+//      const remainder = number % divisor
+//      const keep = (remainder === 0)
+
+//      return keep
+//   })
+// }
+
+// ——
+// JavaScript: 12/10
+
+// Description:
+// Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. For a beginner kata, you can assume that the input data is always a non empty string, no need to verify it.
+// Examples
+// remove("Hi!") === "Hi!"
+// remove("Hi!!!") === "Hi!"
+// remove("!Hi") === "Hi!"
+// remove("!Hi!") === "Hi!"
+// remove("Hi! Hi!") === "Hi Hi!"
+// remove("Hi") === "Hi!"
+
+// function remove(s){
+//   //coding and coding....
+//  return s.replace(/!/g, '') + "!"
+// }
+
+// C#
+
+// public class Kata
+// {
+//   public static string Remove(string s)
+//   {
+//     return s.Replace("!", "") + "!";
+//   }
+// }
