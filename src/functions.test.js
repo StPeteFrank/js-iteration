@@ -44,8 +44,8 @@
  * }
  */
 const yelling = arrayOfStrings => {
-  return arrayOfStrings.map(words => {
-    return words.toUpperCase()
+  return arrayOfStrings.map(strings => {
+    return strings.toUpperCase()
   })
 }
 /**
@@ -65,22 +65,14 @@ const doubleTrouble = arrayOfNumbers => {
  * strings as an argument and returns a new array with each string(the element)
  * suffixed with " is at index X" where X is the -index of the element-
  */
-const stringyIndexes = arrayOfStrings => {
-  return arrayOfStrings.map((strings, index) => {
-    return `${strings} is at index ${index}`
-  })
-}
+
 /*
  * Define a function onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  */
 //*******/documentation open. which of these methods solve.
 // ...
-const onlyTheEvenSurvive = arrayOfNumbers => {
-  return arrayOfNumbers.filter(numbers => {
-    return numbers % 2 === 0
-  })
-}
+
 /*
  * Define a function onlyTheEvenIndexedSurvive that accepts an array of
  * numbers and returns only the elements at indexes that are even
@@ -88,12 +80,7 @@ const onlyTheEvenSurvive = arrayOfNumbers => {
 // if (index % 2 === 0)
 //Whatever comes second in the argument is the index
 // ...
-const onlyTheEvenIndexedSurvive = arrayOfNumbers => {
-  return arrayOfNumbers.filter((numbers, index) => {
-    index = index % 2 === 0
-    return index
-  })
-}
+
 /*
  * Define a function bestMoviesOfTheYear that accepts an array of
  * movie objects AND a year and returns the names of movies that are
@@ -108,15 +95,7 @@ const onlyTheEvenIndexedSurvive = arrayOfNumbers => {
  * }
  * //filter and map
  */
-const bestMoviesOfTheYear = (arrayOfMovies, year) => {
-  return arrayOfMovies
-    .filter(movies => {
-      return movies.score >= 90 && movies.year === year
-    })
-    .map(movies => {
-      return movies.name
-    })
-}
+
 // ...
 /*
  * Define a function everyoneIsOdd that accepts an array of
@@ -125,11 +104,7 @@ const bestMoviesOfTheYear = (arrayOfMovies, year) => {
  */
 //.every method
 // ...
-const everyoneIsOdd = arrayOfNumbers => {
-  return arrayOfNumbers.every(numbers => {
-    return numbers % 2 !== 0
-  })
-}
+
 /*
  * Define a function findTheNeedle that accepts an array of
  * strings and returns the one string that contains the word
@@ -138,7 +113,7 @@ const everyoneIsOdd = arrayOfNumbers => {
 //.find method
 //.includes method
 // ...
-const findTheNeedle = arrayOfStrings => {}
+
 /*
  * Define a function findTheNeedleIndex that accepts an array of
  * strings and returns the index of the string that contains
