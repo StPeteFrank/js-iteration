@@ -43,9 +43,9 @@
  *    // your code here
  * }
  */
-const yelling = arrayOfStrings => {
-  return arrayOfStrings.map(strings => {
-    return strings.toUpperCase()
+const yelling = A => {
+  return A.map(S => {
+    return S.toUpperCase()
   })
 }
 /**
@@ -54,9 +54,10 @@ const yelling = arrayOfStrings => {
  * numbers as an argument and returns a new array with all
  * the numbers multiplied by 2
  */
-const doubleTrouble = arrayOfNumbers => {
-  return arrayOfNumbers.map(numbers => {
-    return numbers * 2
+//
+let doubleTrouble = A => {
+  return A.map(B => {
+    return B * 2
   })
 }
 // ...
@@ -65,22 +66,35 @@ const doubleTrouble = arrayOfNumbers => {
  * strings as an argument and returns a new array with each string(the element)
  * suffixed with " is at index X" where X is the -index of the element-
  */
-
+let stringyIndexes = a => {
+  return a.map((b, i) => {
+    return `${b} is at index ${i}`
+  })
+}
 /*
  * Define a function onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  */
 //*******/documentation open. which of these methods solve.
 // ...
-
+const onlyTheEvenSurvive = a => {
+  return a.filter(n => {
+    return n % 2 === 0
+  })
+}
 /*
  * Define a function onlyTheEvenIndexedSurvive that accepts an array of
  * numbers and returns only the elements at indexes that are even
  */
 // if (index % 2 === 0)
-//Whatever comes second in the argument is the index
+//Whatever comes SECOND IN THE ARGUMENT IS ALWAYS THE INDEX
 // ...
-
+const onlyTheEvenIndexedSurvive = fajita => {
+  return fajita.filter((burrito, taco) => {
+    taco = taco % 2 === 0
+    return taco
+  })
+}
 /*
  * Define a function bestMoviesOfTheYear that accepts an array of
  * movie objects AND a year and returns the names of movies that are
