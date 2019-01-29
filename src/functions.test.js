@@ -109,13 +109,13 @@ const onlyTheEvenIndexedSurvive = fajita => {
  * }
  * //filter and map
  */
-const bestMoviesOfTheYear = (movies, year) => {
-  return movies
-    .filter(movies => {
-      return movies.score > 90 && movies.year === year
+const bestMoviesOfTheYear = (taco, year) => {
+  return taco
+    .filter(taco => {
+      return taco.score > 90 && taco.year === year
     })
-    .map(movies => {
-      return movies.name
+    .map(taco => {
+      return taco.name
     })
 }
 // ...
