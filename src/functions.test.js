@@ -112,7 +112,7 @@ const onlyTheEvenIndexedSurvive = fajita => {
 const bestMoviesOfTheYear = (taco, year) => {
   return taco
     .filter(taco => {
-      return taco.score > 90 && taco.year === year
+      return taco.year === year && taco.score > 90
     })
     .map(taco => {
       return taco.name
@@ -126,7 +126,11 @@ const bestMoviesOfTheYear = (taco, year) => {
  */
 //.every method
 // ...
-
+const everyoneIsOdd = a => {
+  return a.every(n => {
+    return n % 2 !== 0
+  })
+}
 /*
  * Define a function findTheNeedle that accepts an array of
  * strings and returns the one string that contains the word
@@ -135,7 +139,11 @@ const bestMoviesOfTheYear = (taco, year) => {
 //.find method
 //.includes method
 // ...
-
+const findTheNeedle = arrayOfStrings => {
+  return arrayOfStrings.find(string => {
+    return string.includes('needle')
+  })
+}
 /*
  * Define a function findTheNeedleIndex that accepts an array of
  * strings and returns the index of the string that contains
@@ -143,7 +151,11 @@ const bestMoviesOfTheYear = (taco, year) => {
  */
 //.findIndex method
 //.includes method
-
+const findTheNeedleIndex = arrayOfStrings => {
+  return arrayOfStrings.findIndex(string => {
+    return string.includes('needle')
+  })
+}
 // ...
 
 /*
@@ -152,7 +164,11 @@ const bestMoviesOfTheYear = (taco, year) => {
  * four characters long
  */
 //.some method
-
+const someoneToLove = a => {
+  return a.some(b => {
+    return b.length === 4
+  })
+}
 // ...
 
 /*
@@ -165,7 +181,13 @@ const bestMoviesOfTheYear = (taco, year) => {
  */
 //for loop
 //.push method
-
+const mapYourself = arrayOfNumbers => {
+  let numbers = []
+  for (let index = 0; index < arrayOfNumbers.length; index++) {
+    numbers.push(arrayOfNumbers[index] * 2)
+  }
+  return numbers
+}
 // ...
 
 /*
@@ -180,7 +202,15 @@ const bestMoviesOfTheYear = (taco, year) => {
 //for loop
 //if statement
 //.push method
-
+const filterYourself = arrayOfNumbers => {
+  let number = []
+  for (let index = 0; index < arrayOfNumbers.length; index++) {
+    if (arrayOfNumbers[index] % 2 === 0) {
+      number.push(arrayOfNumbers[index])
+    }
+  }
+  return number
+}
 // ...
 
 /*
@@ -196,7 +226,14 @@ const bestMoviesOfTheYear = (taco, year) => {
 //if statement
 //return true ~~reverse it!
 // ...
-
+const everyYourself = array => {
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] % 2 !== 0) {
+      return false
+    }
+  }
+  return true
+}
 /**
  * NOTE: Don't modify anything below this line...
  */
