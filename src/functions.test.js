@@ -43,9 +43,9 @@
  *    // your code here
  * }
  */
-const yelling = A => {
-  return A.map(S => {
-    return S.toUpperCase()
+const yelling = arrayOfStrings => {
+  return arrayOfStrings.map(strings => {
+    return strings.toUpperCase()
   })
 }
 /**
@@ -55,9 +55,9 @@ const yelling = A => {
  * the numbers multiplied by 2
  */
 //
-let doubleTrouble = A => {
-  return A.map(B => {
-    return B * 2
+const doubleTrouble = arrayOfNumbers => {
+  return arrayOfNumbers.map(numbers => {
+    return numbers * 2
   })
 }
 // ...
@@ -66,7 +66,7 @@ let doubleTrouble = A => {
  * strings as an argument and returns a new array with each string(the element)
  * suffixed with " is at index X" where X is the -index of the element-
  */
-let stringyIndexes = a => {
+const stringyIndexes = a => {
   return a.map((b, i) => {
     return `${b} is at index ${i}`
   })
@@ -77,9 +77,9 @@ let stringyIndexes = a => {
  */
 //*******/documentation open. which of these methods solve.
 // ...
-const onlyTheEvenSurvive = a => {
-  return a.filter(n => {
-    return n % 2 === 0
+const onlyTheEvenSurvive = an => {
+  return an.filter(an => {
+    return an % 2 === 0
   })
 }
 /*
@@ -89,10 +89,10 @@ const onlyTheEvenSurvive = a => {
 // if (index % 2 === 0)
 //Whatever comes SECOND IN THE ARGUMENT IS ALWAYS THE INDEX
 // ...
-const onlyTheEvenIndexedSurvive = fajita => {
-  return fajita.filter((burrito, taco) => {
-    taco = taco % 2 === 0
-    return taco
+const onlyTheEvenIndexedSurvive = arrayOfNumbers => {
+  return arrayOfNumbers.filter((numbers, index) => {
+    index = index % 2 === 0
+    return index
   })
 }
 /*
@@ -109,13 +109,13 @@ const onlyTheEvenIndexedSurvive = fajita => {
  * }
  * //filter and map
  */
-const bestMoviesOfTheYear = (taco, year) => {
-  return taco
-    .filter(taco => {
-      return taco.year === year && taco.score > 90
+const bestMoviesOfTheYear = (movies, year) => {
+  return movies
+    .filter(movies => {
+      return movies.year === year && movies.score > 90
     })
-    .map(taco => {
-      return taco.name
+    .map(movies => {
+      return movies.name
     })
 }
 // ...
@@ -126,9 +126,9 @@ const bestMoviesOfTheYear = (taco, year) => {
  */
 //.every method
 // ...
-const everyoneIsOdd = a => {
-  return a.every(n => {
-    return n % 2 !== 0
+const everyoneIsOdd = arrayOfNumbers => {
+  return arrayOfNumbers.every(numbers => {
+    return numbers % 2 !== 0
   })
 }
 /*
@@ -139,9 +139,9 @@ const everyoneIsOdd = a => {
 //.find method
 //.includes method
 // ...
-const findTheNeedle = arrayOfStrings => {
-  return arrayOfStrings.find(string => {
-    return string.includes('needle')
+const findTheNeedle = AS => {
+  return AS.find(S => {
+    return S.includes('needle')
   })
 }
 /*
@@ -181,12 +181,12 @@ const someoneToLove = a => {
  */
 //for loop
 //.push method
-const mapYourself = arrayOfNumbers => {
-  let numbers = []
-  for (let index = 0; index < arrayOfNumbers.length; index++) {
-    numbers.push(arrayOfNumbers[index] * 2)
+const mapYourself = an => {
+  let newArray = []
+  for (let index = 0; index < an.length; index++) {
+    newArray.push(an[index] * 2)
   }
-  return numbers
+  return newArray
 }
 // ...
 
