@@ -43,9 +43,9 @@
  *    // your code here
  * }
  */
-const yelling = arrayOfStrings => {
-  return arrayOfStrings.map(string => {
-    return string.toUpperCase()
+const yelling = a => {
+  return a.map(b => {
+    return b.toUpperCase()
   })
 }
 
@@ -56,9 +56,9 @@ const yelling = arrayOfStrings => {
  * the numbers multiplied by 2
  */
 //
-const doubleTrouble = array => {
-  return array.map(double => {
-    return double * 2
+const doubleTrouble = a => {
+  return a.map(b => {
+    return b * 2
   })
 }
 // ...
@@ -67,9 +67,9 @@ const doubleTrouble = array => {
  * strings as an argument and returns a new array with each string(the element)
  * suffixed with " is at index X" where X is the -index of the element-
  */
-const stringyIndexes = array => {
-  return array.map((element, elementIndex) => {
-    return `${element} is at index ${elementIndex}`
+const stringyIndexes = a => {
+  return a.map((b, i) => {
+    return `${b} is at index ${i}`
   })
 }
 /*
@@ -78,10 +78,10 @@ const stringyIndexes = array => {
  */
 //*******/documentation open. which of these methods solve.
 // ...
-const onlyTheEvenSurvive = array => {
-  return array.filter(number => {
-    number = number % 2 === 0
-    return number
+const onlyTheEvenSurvive = arr => {
+  return arr.filter(element => {
+    element = element % 2 === 0
+    return element
   })
 }
 /*
