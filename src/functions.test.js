@@ -80,8 +80,7 @@ const stringyIndexes = a => {
 // ...
 const onlyTheEvenSurvive = arr => {
   return arr.filter(element => {
-    element = element % 2 === 0
-    return element
+    return element % 2 === 0
   })
 }
 /*
@@ -91,10 +90,9 @@ const onlyTheEvenSurvive = arr => {
 // if (index % 2 === 0)
 //Whatever comes SECOND IN THE ARGUMENT IS ALWAYS THE INDEX
 // ...
-const onlyTheEvenIndexedSurvive = array => {
-  return array.filter((number, index) => {
-    index = index % 2 === 0
-    return index
+const onlyTheEvenIndexedSurvive = arr => {
+  return arr.filter((numbers, index) => {
+    return index % 2 === 0
   })
 }
 /*
@@ -111,13 +109,13 @@ const onlyTheEvenIndexedSurvive = array => {
  * }
  * //filter and map
  */
-const bestMoviesOfTheYear = (array, year) => {
-  return array
-    .filter(array => {
-      return array.score >= 90 && array.year === year
+const bestMoviesOfTheYear = (arr, year) => {
+  return arr
+    .filter(movie => {
+      return movie.score >= 90 && movie.year === year
     })
-    .map(array => {
-      return array.name
+    .map(movie => {
+      return movie.name
     })
 }
 // ...
@@ -128,8 +126,8 @@ const bestMoviesOfTheYear = (array, year) => {
  */
 //.every method
 // ...
-const everyoneIsOdd = array => {
-  return array.every(element => {
+const everyoneIsOdd = arr => {
+  return arr.every(element => {
     return element % 2 === 1
   })
 }
@@ -141,9 +139,9 @@ const everyoneIsOdd = array => {
 //.find method
 //.includes method
 // ...
-const findTheNeedle = array => {
-  return array.find(element => {
-    return element.includes('needle')
+const findTheNeedle = arr => {
+  return arr.find(string => {
+    return string.includes(`needle`)
   })
 }
 /*
@@ -153,9 +151,10 @@ const findTheNeedle = array => {
  */
 //.findIndex method
 //.includes method
-const findTheNeedleIndex = array => {
-  return array.findIndex(element => {
-    return element.includes('needle')
+
+const findTheNeedleIndex = arr => {
+  return arr.findIndex(string => {
+    return string.includes(`needle`)
   })
 }
 // ...
@@ -166,9 +165,12 @@ const findTheNeedleIndex = array => {
  * four characters long
  */
 //.some method
-const someoneToLove = array => {
-  return array.some(element => {
-    return element.length === 4
+// .every returns true if all meet requirement.  some returns true if
+// at least one meets requirement.
+
+const someoneToLove = arr => {
+  return arr.some(string => {
+    return string.length === 4
   })
 }
 // ...
@@ -183,15 +185,15 @@ const someoneToLove = array => {
  */
 //for loop
 //.push method
-const mapYourself = array => {
-  let arrayDouble = []
-  for (let i = 0; i < array.length; i++) {
-    arrayDouble.push(array[i] * 2)
+const mapYourself = arr => {
+  let arr2 = []
+  for (let i = 0; i < arr.length; i++) {
+    arr2.push(arr[i] * 2)
   }
-  return arrayDouble
+  return arr2
 }
-
 // or //
+
 // const doubleTrouble = array => {
 //   return array.map(double => {
 //     return double * 2
@@ -210,15 +212,16 @@ const mapYourself = array => {
  */
 //for loop
 //if statement
-//.push method
-const filterYourself = array => {
-  let evenArray = []
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2 === 0) {
-      evenArray.push(array[i])
+//.push method is adding to the end of its empty array in this case
+
+const filterYourself = arr => {
+  let arr2 = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      arr2.push(arr[i])
     }
   }
-  return evenArray
+  return arr2
 }
 // ...
 
@@ -235,9 +238,9 @@ const filterYourself = array => {
 //if statement
 //return true ~~reverse it!
 // ...
-const everyYourself = array => {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2 === 1) {
+const everyYourself = arr => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 1) {
       return false
     }
   }
