@@ -43,8 +43,8 @@
  *    // your code here
  * }
  */
-const yelling = a => {
-  return a.map(b => {
+function yelling(arr) {
+  return arr.map(b => {
     return b.toUpperCase()
   })
 }
@@ -56,7 +56,7 @@ const yelling = a => {
  * the numbers multiplied by 2
  */
 //
-const doubleTrouble = a => {
+function doubleTrouble(a) {
   return a.map(b => {
     return b * 2
   })
@@ -67,7 +67,7 @@ const doubleTrouble = a => {
  * strings as an argument and returns a new array with each string(the element)
  * suffixed with " is at index X" where X is the -index of the element-
  */
-const stringyIndexes = a => {
+function stringyIndexes(a) {
   return a.map((b, i) => {
     return `${b} is at index ${i}`
   })
@@ -78,9 +78,9 @@ const stringyIndexes = a => {
  */
 //*******/documentation open. which of these methods solve.
 // ...
-const onlyTheEvenSurvive = arr => {
-  return arr.filter(element => {
-    return element % 2 === 0
+let onlyTheEvenSurvive = a => {
+  return a.filter(b => {
+    return b % 2 === 0
   })
 }
 /*
@@ -90,9 +90,9 @@ const onlyTheEvenSurvive = arr => {
 // if (index % 2 === 0)
 //Whatever comes SECOND IN THE ARGUMENT IS ALWAYS THE INDEX
 // ...
-const onlyTheEvenIndexedSurvive = arr => {
-  return arr.filter((numbers, index) => {
-    return index % 2 === 0
+let onlyTheEvenIndexedSurvive = a => {
+  return a.filter((b, i) => {
+    return i % 2 === 0
   })
 }
 /*
@@ -109,13 +109,13 @@ const onlyTheEvenIndexedSurvive = arr => {
  * }
  * //filter and map
  */
-const bestMoviesOfTheYear = (arr, year) => {
-  return arr
-    .filter(movie => {
-      return movie.score >= 90 && movie.year === year
+let bestMoviesOfTheYear = (a, year) => {
+  return a
+    .filter(b => {
+      return b.score >= 90 && b.year === year
     })
-    .map(movie => {
-      return movie.name
+    .map(b => {
+      return b.name
     })
 }
 // ...
@@ -126,9 +126,9 @@ const bestMoviesOfTheYear = (arr, year) => {
  */
 //.every method
 // ...
-const everyoneIsOdd = arr => {
-  return arr.every(element => {
-    return element % 2 === 1
+let everyoneIsOdd = a => {
+  return a.every(b => {
+    return b % 2 === 1
   })
 }
 /*
@@ -139,9 +139,9 @@ const everyoneIsOdd = arr => {
 //.find method
 //.includes method
 // ...
-const findTheNeedle = arr => {
-  return arr.find(string => {
-    return string.includes(`needle`)
+let findTheNeedle = a => {
+  return a.find(b => {
+    return b.includes(`needle`)
   })
 }
 /*
@@ -149,12 +149,12 @@ const findTheNeedle = arr => {
  * strings and returns the index of the string that contains
  *  the word `needle` inside
  */
-//.findIndex method
+//.findIndex method .When using findindex there is no need for second argument.
 //.includes method
 
-const findTheNeedleIndex = arr => {
-  return arr.findIndex(string => {
-    return string.includes(`needle`)
+let findTheNeedleIndex = a => {
+  return a.findIndex(b => {
+    return b.includes(`needle`)
   })
 }
 // ...
@@ -164,13 +164,13 @@ const findTheNeedleIndex = arr => {
  * strings and returns true if at least one string is exactly
  * four characters long
  */
-//.some method
+//.some method . Returns true if at least one element matched conditions.
 // .every returns true if all meet requirement.  some returns true if
 // at least one meets requirement.
 
-const someoneToLove = arr => {
-  return arr.some(string => {
-    return string.length === 4
+let someoneToLove = a => {
+  return a.some(b => {
+    return b.length === 4
   })
 }
 // ...
@@ -184,13 +184,13 @@ const someoneToLove = arr => {
  * So no using forEach, map, filter, reduce, etc.
  */
 //for loop
-//.push method
-const mapYourself = arr => {
-  let arr2 = []
-  for (let i = 0; i < arr.length; i++) {
-    arr2.push(arr[i] * 2)
+//.push method  When for looping in JS use .push etc to return array with work done.
+let mapYourself = a => {
+  let b = []
+  for (let i = 0; i < a.length; i++) {
+    b.push(a[i] * 2)
   }
-  return arr2
+  return b
 }
 // or //
 
@@ -214,14 +214,14 @@ const mapYourself = arr => {
 //if statement
 //.push method is adding to the end of its empty array in this case
 
-const filterYourself = arr => {
-  let arr2 = []
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      arr2.push(arr[i])
+let filterYourself = a => {
+  let b = []
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] % 2 === 0) {
+      b.push(a[i])
     }
   }
-  return arr2
+  return b
 }
 // ...
 
@@ -238,9 +238,9 @@ const filterYourself = arr => {
 //if statement
 //return true ~~reverse it!
 // ...
-const everyYourself = arr => {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 1) {
+let everyYourself = a => {
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] % 2 === 1) {
       return false
     }
   }
