@@ -78,7 +78,7 @@ function stringyIndexes(a) {
  */
 //*******/documentation open. which of these methods solve.
 // ...
-let onlyTheEvenSurvive = a => {
+function onlyTheEvenSurvive(a) {
   return a.filter(b => {
     return b % 2 === 0
   })
@@ -90,7 +90,7 @@ let onlyTheEvenSurvive = a => {
 // if (index % 2 === 0)
 //Whatever comes SECOND IN THE ARGUMENT IS ALWAYS THE INDEX
 // ...
-let onlyTheEvenIndexedSurvive = a => {
+function onlyTheEvenIndexedSurvive(a) {
   return a.filter((b, i) => {
     return i % 2 === 0
   })
@@ -109,7 +109,7 @@ let onlyTheEvenIndexedSurvive = a => {
  * }
  * //filter and map
  */
-let bestMoviesOfTheYear = (a, year) => {
+function bestMoviesOfTheYear(a, year) {
   return a
     .filter(b => {
       return b.score >= 90 && b.year === year
@@ -126,7 +126,7 @@ let bestMoviesOfTheYear = (a, year) => {
  */
 //.every method
 // ...
-let everyoneIsOdd = a => {
+function everyoneIsOdd(a) {
   return a.every(b => {
     return b % 2 === 1
   })
@@ -139,7 +139,7 @@ let everyoneIsOdd = a => {
 //.find method
 //.includes method
 // ...
-let findTheNeedle = a => {
+function findTheNeedle(a) {
   return a.find(b => {
     return b.includes(`needle`)
   })
@@ -152,8 +152,8 @@ let findTheNeedle = a => {
 //.findIndex method .When using findindex there is no need for second argument.
 //.includes method
 
-let findTheNeedleIndex = a => {
-  return a.findIndex(b => {
+function findTheNeedleIndex(a) {
+  return a.findIndex((b, i) => {
     return b.includes(`needle`)
   })
 }
@@ -168,7 +168,7 @@ let findTheNeedleIndex = a => {
 // .every returns true if all meet requirement.  some returns true if
 // at least one meets requirement.
 
-let someoneToLove = a => {
+function someoneToLove(a) {
   return a.some(b => {
     return b.length === 4
   })
@@ -185,7 +185,7 @@ let someoneToLove = a => {
  */
 //for loop
 //.push method  When for looping in JS use .push etc to return array with work done.
-let mapYourself = a => {
+function mapYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
     b.push(a[i] * 2)
@@ -214,7 +214,7 @@ let mapYourself = a => {
 //if statement
 //.push method is adding to the end of its empty array in this case
 
-let filterYourself = a => {
+function filterYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
     if (a[i] % 2 === 0) {
@@ -238,7 +238,7 @@ let filterYourself = a => {
 //if statement
 //return true ~~reverse it!
 // ...
-let everyYourself = a => {
+function everyYourself(a) {
   for (let i = 0; i < a.length; i++) {
     if (a[i] % 2 === 1) {
       return false
