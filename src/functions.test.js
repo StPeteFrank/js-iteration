@@ -43,8 +43,8 @@
  *    // your code here
  * }
  */
-function yelling(arr) {
-  return arr.map(b => {
+function yelling(a) {
+  return a.map(b => {
     return b.toUpperCase()
   })
 }
@@ -128,7 +128,9 @@ function bestMoviesOfTheYear(a, year) {
 // ...
 function everyoneIsOdd(a) {
   return a.every(b => {
-    return b % 2 === 1
+    if (b % 2 === 1) {
+      return true
+    }
   })
 }
 /*
@@ -151,9 +153,8 @@ function findTheNeedle(a) {
  */
 //.findIndex method .When using findindex there is no need for second argument.
 //.includes method
-
 function findTheNeedleIndex(a) {
-  return a.findIndex((b, i) => {
+  return a.findIndex(b => {
     return b.includes(`needle`)
   })
 }
@@ -165,16 +166,15 @@ function findTheNeedleIndex(a) {
  * four characters long
  */
 //.some method . Returns true if at least one element matched conditions.
-// .every returns true if all meet requirement.  some returns true if
-// at least one meets requirement.
-
+// .every returns true if all meet requirement.
+// ...
 function someoneToLove(a) {
   return a.some(b => {
-    return b.length === 4
+    if (b.length === 4) {
+      return true
+    }
   })
 }
-// ...
-
 /*
  * Define a function mapYourself that accepts an array of
  * numbers and returns a new array where each number is doubled.
@@ -213,7 +213,6 @@ function mapYourself(a) {
 //for loop
 //if statement
 //.push method is adding to the end of its empty array in this case
-
 function filterYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
