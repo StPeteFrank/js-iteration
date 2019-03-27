@@ -185,6 +185,7 @@ function someoneToLove(a) {
  */
 //for loop
 //.push method  When for looping in JS use .push etc to return array with work done.
+
 function mapYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
