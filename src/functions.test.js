@@ -107,7 +107,7 @@ function onlyTheEvenIndexedSurvive(a) {
  *   year: "2017",
  *   score: 99
  * }
- * //filter and map
+ * //.f .m
  */
 function bestMoviesOfTheYear(a, year) {
   return a
@@ -124,7 +124,7 @@ function bestMoviesOfTheYear(a, year) {
  * numbers and returns true if every element of the array is
  * odd.
  */
-//.every method
+//.e
 // ...
 function everyoneIsOdd(a) {
   return a.every(b => {
@@ -138,8 +138,8 @@ function everyoneIsOdd(a) {
  * strings and returns the one string that contains the word
  * `needle` inside
  */
-//.find method
-//.includes method
+//.f
+//.i
 // ...
 function findTheNeedle(a) {
   return a.find(b => {
@@ -151,8 +151,8 @@ function findTheNeedle(a) {
  * strings and returns the index of the string that contains
  *  the word `needle` inside
  */
-//.findIndex method .When using findindex there is no need for second argument.
-//.includes method
+//.fi
+//.i
 function findTheNeedleIndex(a) {
   return a.findIndex(b => {
     return b.includes(`needle`)
@@ -165,8 +165,8 @@ function findTheNeedleIndex(a) {
  * strings and returns true if at least one string is exactly
  * four characters long
  */
-//.some method . Returns true if at least one element matched conditions.
-// .every returns true if all meet requirement.
+//.s method . Returns true if at least one (or some) element matched conditions.
+// .e returns true if all meet requirement.
 // ...
 function someoneToLove(a) {
   return a.some(b => {
@@ -183,9 +183,8 @@ function someoneToLove(a) {
  *
  * So no using forEach, map, filter, reduce, etc.
  */
-//for loop
-//.push method  When for looping in JS use .push etc to return array with work done.
-
+//
+//.p  When for looping in JS use .p etc to return array with work done.
 function mapYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
@@ -211,9 +210,9 @@ function mapYourself(a) {
  *
  * So no using forEach, map, filter, reduce, etc.
  */
-//for loop
-//if statement
-//.push method is adding to the end of its empty array in this case
+//
+//if
+//.p
 function filterYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
@@ -234,8 +233,8 @@ function filterYourself(a) {
  *
  * So no using forEach, map, filter, reduce, etc.
  */
-//for loop
-//if statement
+//
+//if
 //return true ~~reverse it!
 // ...
 function everyYourself(a) {
@@ -466,7 +465,8 @@ test('everyYourself()', t => {
 // JavaScript: 12/10
 
 // Description:
-// Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. For a beginner kata, you can assume that the input data is always a non empty string, no need to verify it.
+// Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string.
+// For a beginner kata, you can assume that the input data is always a non empty string, no need to verify it.
 // Examples
 // remove("Hi!") === "Hi!"
 // remove("Hi!!!") === "Hi!"
