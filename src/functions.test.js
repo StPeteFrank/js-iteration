@@ -107,7 +107,7 @@ function onlyTheEvenIndexedSurvive(a) {
  *   year: "2017",
  *   score: 99
  * }
- * //.f .m
+ *
  */
 function bestMoviesOfTheYear(a, year) {
   return a
@@ -118,13 +118,14 @@ function bestMoviesOfTheYear(a, year) {
       return b.name
     })
 }
+
 // ...
 /*
  * Define a function everyoneIsOdd that accepts an array of
  * numbers and returns true if every element of the array is
  * odd.
  */
-//.e
+
 // ...
 function everyoneIsOdd(a) {
   return a.every(b => {
@@ -138,8 +139,7 @@ function everyoneIsOdd(a) {
  * strings and returns the one string that contains the word
  * `needle` inside
  */
-//.f
-//.i
+
 // ...
 function findTheNeedle(a) {
   return a.find(b => {
@@ -151,8 +151,7 @@ function findTheNeedle(a) {
  * strings and returns the index of the string that contains
  *  the word `needle` inside
  */
-//.fi
-//.i
+
 function findTheNeedleIndex(a) {
   return a.findIndex(b => {
     return b.includes(`needle`)
@@ -165,8 +164,8 @@ function findTheNeedleIndex(a) {
  * strings and returns true if at least one string is exactly
  * four characters long
  */
-//.s method . Returns true if at least one (or some) element matched conditions.
-// .e returns true if all meet requirement.
+// method . Returns true if at least one (or some) element matched conditions.
+// method . Returns true if all (every) meet requirement.
 // ...
 function someoneToLove(a) {
   return a.some(b => {
@@ -184,7 +183,7 @@ function someoneToLove(a) {
  * So no using forEach, map, filter, reduce, etc.
  */
 //
-//.p  When for looping in JS use .p etc to return array with work done.
+//When for looping in JS use .p etc to return array with work done.
 function mapYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
@@ -192,6 +191,7 @@ function mapYourself(a) {
   }
   return b
 }
+
 // or //
 
 // const doubleTrouble = array => {
@@ -211,8 +211,7 @@ function mapYourself(a) {
  * So no using forEach, map, filter, reduce, etc.
  */
 //
-//if
-//.p
+
 function filterYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
