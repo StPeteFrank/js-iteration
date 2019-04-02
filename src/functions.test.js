@@ -61,6 +61,7 @@ function doubleTrouble(a) {
     return b * 2
   })
 }
+
 // ...
 /*
  * Define a function stringyIndexes() that takes an array of
@@ -107,7 +108,7 @@ function onlyTheEvenIndexedSurvive(a) {
  *   year: "2017",
  *   score: 99
  * }
- *
+ 
  */
 function bestMoviesOfTheYear(a, year) {
   return a
@@ -118,15 +119,12 @@ function bestMoviesOfTheYear(a, year) {
       return b.name
     })
 }
-
 // ...
 /*
  * Define a function everyoneIsOdd that accepts an array of
  * numbers and returns true if every element of the array is
  * odd.
  */
-
-// ...
 function everyoneIsOdd(a) {
   return a.every(b => {
     if (b % 2 === 1) {
@@ -134,24 +132,25 @@ function everyoneIsOdd(a) {
     }
   })
 }
+// ...
+
 /*
  * Define a function findTheNeedle that accepts an array of
  * strings and returns the one string that contains the word
  * `needle` inside
  */
-
-// ...
 function findTheNeedle(a) {
   return a.find(b => {
     return b.includes(`needle`)
   })
 }
+// ...
+
 /*
  * Define a function findTheNeedleIndex that accepts an array of
  * strings and returns the index of the string that contains
  *  the word `needle` inside
  */
-
 function findTheNeedleIndex(a) {
   return a.findIndex(b => {
     return b.includes(`needle`)
@@ -191,7 +190,6 @@ function mapYourself(a) {
   }
   return b
 }
-
 // or //
 
 // const doubleTrouble = array => {
@@ -211,7 +209,6 @@ function mapYourself(a) {
  * So no using forEach, map, filter, reduce, etc.
  */
 //
-
 function filterYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
