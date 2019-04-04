@@ -48,7 +48,6 @@ function yelling(a) {
     return b.toUpperCase()
   })
 }
-
 /**
  *
  * Define a function named `doubleTrouble` that takes an array of
@@ -107,7 +106,6 @@ function onlyTheEvenIndexedSurvive(a) {
  *   year: "2017",
  *   score: 99
  * }
- 
  */
 function bestMoviesOfTheYear(a, year) {
   return a
@@ -124,8 +122,6 @@ function bestMoviesOfTheYear(a, year) {
  * numbers and returns true if every element of the array is
  * odd.
  */
-
-// ...
 function everyoneIsOdd(a) {
   return a.every(b => {
     if (b % 2 === 1) {
@@ -133,6 +129,8 @@ function everyoneIsOdd(a) {
     }
   })
 }
+// ...
+
 /*
  * Define a function findTheNeedle that accepts an array of
  * strings and returns the one string that contains the word
