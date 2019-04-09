@@ -187,6 +187,7 @@ function mapYourself(a) {
   }
   return b
 }
+
 // or //
 
 // const doubleTrouble = array => {
