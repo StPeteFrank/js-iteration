@@ -179,7 +179,7 @@ function someoneToLove(a) {
  * So no using forEach, map, filter, reduce, etc.
  */
 //
-//When for looping in JS use .p etc to return array with work done.
+
 function mapYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
@@ -187,7 +187,6 @@ function mapYourself(a) {
   }
   return b
 }
-
 // or //
 
 // const doubleTrouble = array => {
