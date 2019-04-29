@@ -67,8 +67,8 @@ function doubleTrouble(a) {
  * suffixed with " is at index X" where X is the -index of the element-
  */
 function stringyIndexes(a) {
-  return a.map((b, i) => {
-    return `${b} is at index ${i}`
+  return a.map((b, x) => {
+    return `${b} is at index ${x}`
   })
 }
 /*
@@ -110,7 +110,7 @@ function onlyTheEvenIndexedSurvive(a) {
 function bestMoviesOfTheYear(a, year) {
   return a
     .filter(b => {
-      return b.score >= 90 && b.year === year
+      return b.year === year && b.score >= 90
     })
     .map(b => {
       return b.name
@@ -179,7 +179,6 @@ function someoneToLove(a) {
  * So no using forEach, map, filter, reduce, etc.
  */
 //
-
 function mapYourself(a) {
   let b = []
   for (let i = 0; i < a.length; i++) {
