@@ -107,10 +107,10 @@ function onlyTheEvenIndexedSurvive(a) {
  *   score: 99
  * }
  */
-function bestMoviesOfTheYear(a, year) {
-  return a
+function bestMoviesOfTheYear(mo, year) {
+  return mo
     .filter(b => {
-      return b.year === year && b.score >= 90
+      return b.score >= 90 && b.year === year
     })
     .map(b => {
       return b.name
@@ -138,7 +138,7 @@ function everyoneIsOdd(a) {
  */
 function findTheNeedle(a) {
   return a.find(b => {
-    return b.includes(`needle`)
+    return b.includes('needle')
   })
 }
 // ...
@@ -150,7 +150,7 @@ function findTheNeedle(a) {
  */
 function findTheNeedleIndex(a) {
   return a.findIndex(b => {
-    return b.includes(`needle`)
+    return b.includes('needle')
   })
 }
 // ...
@@ -235,6 +235,7 @@ function everyYourself(a) {
       return false
     }
   }
+
   return true
 }
 /**
